@@ -10,19 +10,15 @@ export class SignUpPage{
 async goto(){
     await this.page.goto("https://www.demoblaze.com/")
     }
-async signUpFn(){
+async signUpFn(username,password){
     await this.signUp.click()
-    await this.username.fill("SruthiSreejith")
-    await this.password.fill("123")
+    await this.username.fill(username)
+    await this.password.fill(password)
+   
     }    
 async clickSignUp(){
     await this.signUpButton.click()
-}
-async signUpFn(){
-    await this.signUp.click()
-    await this.username.fill("SruthiSreejith")
-    await this.password.fill("123")
-    }  
+} 
 async signUpClose(){
     this.this.signUpClose.click()      
 }
