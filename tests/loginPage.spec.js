@@ -14,8 +14,8 @@ test('Login with Valid Credentials',async({page})=>{
     await expect(page).toHaveURL("https://www.demoblaze.com/")
 })
 test('Login with invalid username and valid password',async({page})=>{
-    const loginUsername1=data[1].validUsername
-    const loginPassword1=data[1].invalidPassword
+    const loginUsername1=data[1].invalidUsername
+    const loginPassword1=data[1].validPassword
     const loginPage1=new LoginPage(page)
     await loginPage1.goto()
     await loginPage1.loginbutton()
@@ -27,8 +27,8 @@ test('Login with invalid username and valid password',async({page})=>{
     })
  })   
 test('Login with valid username and invalid password',async({page})=>{
-    const loginUsername2=data[2].invalidUsername
-    const loginPassword2=data[2].validPassword
+    const loginUsername2=data[2].validUsername
+    const loginPassword2=data[2].invalidPassword
     const loginPage2=new LoginPage(page)
     await loginPage2.goto()
     await loginPage2.loginbutton()
