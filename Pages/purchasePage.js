@@ -22,9 +22,13 @@ async purchaseFn(customername,country,city,card,month,year){
     await this.customerMonth.fill(month)
     await this.customerYear.fill(year)
     await this.Purchase.click()
+    
+}
+async purchaseOk(){
     await this.Ok.click()
-
 }}
+
+
 
 
 

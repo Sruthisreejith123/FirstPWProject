@@ -34,5 +34,7 @@ test('Login with Valid Credentials',async({page})=>{
    // await expect(page.locator("//td[text()='Sony vaio i5']")).toHaveText('Sony vaio i5')
     await expect(page.locator("//h2[text()='Products']")).toHaveText('Products')
     await purchasePage.purchaseFn(customerName,customerCountrty,customerCity,customerCard,month,year )
-    //await expect(page.locator("//h2[text()='Thank you for your purchase!']")).toHaveText('Thank you for your purchase!')
+    await expect(page.locator("//h2[text()='Thank you for your purchase!']")).toHaveText('Thank you for your purchase!')
+    await purchasePage.purchaseOk()
 })
+

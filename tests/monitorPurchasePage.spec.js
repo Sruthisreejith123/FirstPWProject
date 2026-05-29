@@ -34,9 +34,7 @@ test('Login with Valid Credentials',async({page})=>{
     await addToCartPage.openCartFn()
     //await expect(page.locator("//td[text()='ASUS Full HD']")).toHaveText('ASUS Full HD')
     await expect(page.locator("//h2[text()='Products']")).toHaveText('Products')
-    await purchasePage.purchaseFn(customerName,customerCountrty,customerCity,customerCard,month,year )
-    //await expect(page.locator("//h2[text()='Thank you for your purchase!']")).toHaveText('Thank you for your purchase!',{ timeout: 10000 })
-    await expect(page.getByText('Thank you for your purchase!')).toBeVisible();
-    //await expect(page.getByRole('heading', { name: 'Thank you for your purchase!' })).toBeVisible();
-
+    await purchasePage.purchaseFn(customerName,customerCountrty,customerCity,customerCard,month,year)
+    await expect(page.locator("//h2([text()='Thank you for your purchase!'])")).toHaveText('Thank you for your purchase!')
+    await purchasePage.purchaseOk()
 })
